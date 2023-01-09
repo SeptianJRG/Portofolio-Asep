@@ -1,0 +1,82 @@
+void setup() {
+  for(int i=4; i<=13; i++)
+  {
+    pinMode(i, OUTPUT);
+  }
+}
+
+void loop(){
+  effect_1();
+  
+  effect_2();
+ 
+  effect_3();
+}
+  void effect_1()
+  {
+  for(int i=4; i<=13; i++){
+    digitalWrite(i, HIGH);
+    delay(30);
+    digitalWrite(i+1, HIGH);
+    delay(30);
+    digitalWrite(i+2, HIGH);
+    delay(30);
+    digitalWrite(i, LOW);
+    delay(30);
+    digitalWrite(i-1, LOW);
+    delay(30);
+  }
+  for(int i=13; i>4; i--)
+  {
+    digitalWrite(i, HIGH);
+    delay(30);
+    digitalWrite(i-1, HIGH);
+    delay(30);
+    digitalWrite(i-2, HIGH);
+    delay(30);
+    digitalWrite(i, LOW);
+    delay(30);
+    digitalWrite(i-1, LOW);
+    delay(30);
+  }
+  }
+  void effect_2()
+  {
+    for(int i=4; i<=13; i++){
+    digitalWrite(i, HIGH);
+    delay(100);
+    }
+    for(int i=4; i<=13; i++){
+    digitalWrite(i, LOW);
+    delay(100);
+    }
+    for(int i=13; i>=4; i--){
+    digitalWrite(i, HIGH);
+    delay(100);
+    }
+    for(int i=13; i>=4; i--){
+    digitalWrite(i, LOW);
+    delay(100);
+    }
+  }
+  void effect_3()
+  {
+    for(int i=4; i<=13; i++){
+    digitalWrite(i, HIGH);
+    delay(50);
+    i+=1;
+    }
+    for(int i=4; i<=13; i++){
+    digitalWrite(i, LOW);
+    delay(50);
+    }
+    for(int i=13; i>=4; i--){
+    digitalWrite(i, HIGH);
+    delay(50);
+    i-=1;
+    }
+    for(int i=13; i>=4; i--){
+    digitalWrite(i, HIGH);
+    delay(50);
+    }
+  }

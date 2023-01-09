@@ -1,0 +1,27 @@
+#include <DHT.h>
+#define DHTPIN 3
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+ 
+Serial.begin(9600);
+Serial.println("Project Untuk Mengukur Suhu dan Kelembapan");
+dht.begin();
+}
+
+void loop() {
+  
+float s = dht.readTemperature();
+float k = dht.readHumidity();
+
+Serial.print("Suhu : ");
+Serial.print(s);
+Serial.print(" C\t");
+Serial.print("Kelembapan : ");
+Serial.print(k);
+Serial.println(" %");
+
+delay (1000);
+}
